@@ -11,9 +11,9 @@ const Header = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto" style={{ marginLeft: '600px' }}>
           <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/home">Home</Link></Nav.Link>
-          <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/orders">Orders</Link></Nav.Link>
+          <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/order">Orders</Link></Nav.Link>
           <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/admin">Admin</Link></Nav.Link>
-          <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/deals">Deals</Link></Nav.Link>
+          <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/checkout">Deals</Link></Nav.Link>
           <Button variant="outline-secondary">Login</Button>{' '}
 
         </Nav>

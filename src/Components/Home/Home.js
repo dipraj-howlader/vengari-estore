@@ -17,7 +17,7 @@ const Home = () => {
             <div>
             <Header></Header>
             </div>
-            <div>
+            <div className="display">
                 {
                     products.map(product => <DisplayProducts product={product} ></DisplayProducts>)
                 }

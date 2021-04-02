@@ -1,0 +1,8 @@
+.displayProducts{
+background-color: aqua;
+margin: 10px;
+border: 1px solid red;
+}
+.displayProducts img{
+    width: 50px;
+}

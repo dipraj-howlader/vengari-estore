@@ -1,13 +1,24 @@
-import React from 'react';
+import { Button } from 'react-bootstrap';
+import React from 'react';import './DisplayProducts.css';
+import { useHistory, useParams } from 'react-router';
+
 
 const DisplayProducts = (props) => {
-    const {name, price, image} = props.product;
+    const history = useHistory();
+    const {name, price, image, _id} = props.product;
+    
+    const handleCheckOut = (id) => {
+        history.push(`/checkout/${id}`);
+    }
     return (
-        <div>
-            <h3>{name}</h3>
-            <p>{price}</p>
+        <div className="displayProducts">
             <img src={image} alt=""/>
-
+            <h3>{name}</h3>
+            <div style={{display:'flex',paddingLeft:'10px'}}>
+            <h5>${price}</h5>
+            <Button onClick={() => handleCheckOut(_id)} variant="success"> Buy Now </Button>{' '}
+            
+            </div>
         </div>
     );
 };
