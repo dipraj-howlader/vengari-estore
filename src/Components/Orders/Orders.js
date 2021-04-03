@@ -1,15 +1,23 @@
-import React from 'react';
-import { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../App';
+import OrderDetails from '../OrderDetalis/OrderDetails';
 
 const Orders = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [pdAllInfo, setPdAllInfo] = useState();
+    useEffect(() =>{
+        fetch('http://localhost:5055/orderinfo')
+        .then(res=> res.json())
+        .then( data => setPdAllInfo(data));
+    }, [])
+
+
     return (
-        <div >
-            <h1>Hey, <span style={{color:'blue'}}>{loggedInUser.Username}</span> your orders are:</h1>
-            <br/>
-            <h1>This </h1>
-        </div>
+       <div>
+        {
+            pdAllInfo?.map(pd => <OrderDetails pd={pd}></OrderDetails>)
+        }
+       </div>
     );
 };
 

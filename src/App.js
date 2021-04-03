@@ -16,6 +16,7 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import PlaceInfo from './Components/PlacedInfo/PlaceInfo';
+import OrderDetails from './Components/OrderDetalis/OrderDetails';
 export const UserContext = createContext();
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
  <Router>
      <Switch>
+     <PrivateRoute path="/orderDetails">
+      <OrderDetails></OrderDetails>
+       </PrivateRoute>
        <PrivateRoute path="/placed">
       <PlaceInfo></PlaceInfo>
        </PrivateRoute>

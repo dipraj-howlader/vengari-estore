@@ -25,14 +25,23 @@ const Checkout = () => {
 
 
 let orderinfo = '';
+
    const pdFound = () => {
     for (let i = 0; i < orderedProduct.length; i++) {
         const pd = orderedProduct[i];
         if(pd._id===pdId){
             const date = new Date ();
-           orderinfo = {...loggedInUser, ...pd, date};
+            let RID ={...pd} 
+             RID={
+                Pid: pd._id,
+                Pname: pd.name,
+                Pprice: pd.price,
 
-            // console.log(orderinfo)
+            }
+
+           orderinfo = {...loggedInUser, ...RID, date};
+
+            console.log('QQQQQ',orderinfo)
             return(
             <div>
                 <div>
