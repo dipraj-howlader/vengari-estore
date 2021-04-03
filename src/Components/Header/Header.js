@@ -1,9 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button, Nav, NavDropdown } from 'react-bootstrap';
+import { useContext } from 'react';
+import { UserContext } from '../../App';
 
 const Header = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const history = useHistory();
+  const handleLogin =() =>{
+    history.push('/login');
+  }
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand><h1>Vengari</h1> </Navbar.Brand>
@@ -14,7 +21,12 @@ const Header = () => {
           <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/order">Orders</Link></Nav.Link>
           <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/admin">Admin</Link></Nav.Link>
           <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/checkout">Deals</Link></Nav.Link>
-          <Button variant="outline-secondary">Login</Button>{' '}
+          
+
+          { loggedInUser.isSignedIn? <p style={{ textDecoration: 'none', padding: '8px', color: 'black' }}>{loggedInUser.name}</p> :
+           <Button onClick={handleLogin} variant="outline-secondary">Login</Button>
+                    
+                  }
 
         </Nav>
       </Navbar.Collapse>
