@@ -37,7 +37,7 @@ const Login = () => {
                 const { displayName, email } = user;
                 const signInUser = {
                     isSignedIn: true,
-                    name: displayName,
+                    Username: displayName,
                     email: email
                 }
                 // console.log("Sign form log",signInUser);

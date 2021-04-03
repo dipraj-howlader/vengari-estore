@@ -23,7 +23,7 @@ const Header = () => {
           <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/checkout">Deals</Link></Nav.Link>
           
 
-          { loggedInUser.isSignedIn? <p style={{ textDecoration: 'none', padding: '8px', color: 'black' }}>{loggedInUser.name}</p> :
+          { loggedInUser.isSignedIn? <p style={{ textDecoration: 'none', padding: '8px', color: 'black' }}>{loggedInUser.Username}</p> :
            <Button onClick={handleLogin} variant="outline-secondary">Login</Button>
                     
                   }

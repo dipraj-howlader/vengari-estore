@@ -15,13 +15,14 @@ import Login from './Components/Login/Login';
 import { createContext } from 'react';
 import { useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import PlaceInfo from './Components/PlacedInfo/PlaceInfo';
 export const UserContext = createContext();
 
 function App() {
 
     const [loggedInUser, setLoggedInUser] = useState({
       isSignedIn: false,
-      name: '',
+      Username: '',
       email: '',
       password: '',
       success:''
@@ -31,12 +32,15 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
  <Router>
      <Switch>
+       <PrivateRoute path="/placed">
+      <PlaceInfo></PlaceInfo>
+       </PrivateRoute>
        <Route path="/login">
          <Login></Login>
        </Route>
-       <Route path="/order">
+       <PrivateRoute path="/order">
          <Orders></Orders>
-       </Route>
+       </PrivateRoute>
        <PrivateRoute path="/checkout/:_id">
          <Checkout></Checkout>
        </PrivateRoute>

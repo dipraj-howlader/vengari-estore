@@ -9,6 +9,7 @@ const Admin = () => {
     const [imageURL, setImageURL] = useState(null);
 
   const { register, handleSubmit, watch, errors } = useForm();
+  
   const onSubmit = (data) => {
       const productData = {
           name: data.name,
