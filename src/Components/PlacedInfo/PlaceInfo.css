@@ -1,0 +1,9 @@
+.placed{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+}
+.placed img{
+    width: 500px;
+}

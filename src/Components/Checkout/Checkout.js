@@ -30,7 +30,7 @@ let orderinfo = '';
     for (let i = 0; i < orderedProduct.length; i++) {
         const pd = orderedProduct[i];
         if(pd._id===pdId){
-            const date = new Date ();
+            const date = new Date ().toDateString('dd/MM/yyyy');
             let RID ={...pd} 
              RID={
                 Pid: pd._id,
@@ -47,9 +47,9 @@ let orderinfo = '';
                 <Header></Header>
                 </div>
                 <div className="checkoutPd">
-                    <h1>Check Out Description</h1>
-                   <h2> Name: {pd.name}</h2>
-                    <h4>price: ${pd.price}</h4>
+                    <h1>Check Out</h1>
+                   <h2> Product Name : {pd.name}</h2>
+                    <h4>Price: ${pd.price}</h4>
                 </div>
             </div>
             )
@@ -82,8 +82,8 @@ history.push('/placed');
            <div>
            {pdFound()}
            </div>
-           <div>
-           <Button onClick={goToPlaceOrder} variant="warning"> Place order </Button>{' '}
+           <div className="checkOutBtn">
+           <Button onClick={goToPlaceOrder} variant="warning"> Place Order </Button>{' '}
            </div>
         </div>
     );

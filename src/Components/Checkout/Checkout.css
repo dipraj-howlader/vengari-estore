@@ -4,6 +4,17 @@
     justify-content: center;
     text-align: center;
 }
-.checkoutPd {
+.checkoutPd h1{
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px gray;
+}
+.checkOutBtn{
+    margin-top: 50px;
+    text-align: center;
+}
+.checkoutPd h4{
+    color: rgb(42, 98, 117);
     
 }

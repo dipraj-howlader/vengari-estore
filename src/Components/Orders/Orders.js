@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../App';
+import Header from '../Header/Header';
 import OrderDetails from '../OrderDetalis/OrderDetails';
 
 const Orders = () => {
@@ -14,6 +15,8 @@ const Orders = () => {
 
     return (
        <div>
+           <Header></Header>
+           <h3>Hey <span style={{color:'cyan'}}>{loggedInUser.Username}</span> , You have ordered: </h3>
         {
             pdAllInfo?.map(pd => <OrderDetails pd={pd}></OrderDetails>)
         }

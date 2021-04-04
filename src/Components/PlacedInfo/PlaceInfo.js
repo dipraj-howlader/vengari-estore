@@ -1,13 +1,16 @@
+import { Button } from 'react-bootstrap';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import img from '../../image/giphy.gif';
+import './PlaceInfo.css';
 
 const PlaceInfo = () => {
 
 
     return (
-        <div style={{color:'blue'}}>
-            <h1>Order Placed</h1>
-            <Link to="/order">Order info</Link>
+        <div className="placed">
+            <img src={img} alt=""/>
+            <Button variant="primary"><Link style={{textDecoration:'none',color:'black'}} to="/order">Check Your All Orders Info </Link> </Button>{' '}
         </div>
     );
 };
