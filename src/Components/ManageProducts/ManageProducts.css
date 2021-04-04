@@ -1,0 +1,21 @@
+.mnpd{
+    background-color: rgba(10, 8, 8, 0.753);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.mnpd button {
+ 
+
+}
+.mnpd h4{
+    color:darksalmon;
+    
+}
+.mnpd h3{
+    border: 1px solid gray;
+    padding: 10px;
+    box-shadow: 1px 1px 5px gray;
+    margin-top: 5px;
+}

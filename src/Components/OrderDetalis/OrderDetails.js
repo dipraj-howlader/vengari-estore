@@ -8,7 +8,7 @@ const OrderDetails = (props) => {
     
     if(loggedInUser.email === email)
         return(
-            <h1>{Pname}</h1>
+        <div></div>
         )
     return (
         <div>

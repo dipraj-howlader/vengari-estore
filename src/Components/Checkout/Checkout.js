@@ -41,7 +41,6 @@ let orderinfo = '';
 
            orderinfo = {...loggedInUser, ...RID, date};
 
-            console.log('QQQQQ',orderinfo)
             return(
             <div>
                 <div>
@@ -51,7 +50,6 @@ let orderinfo = '';
                     <h1>Check Out Description</h1>
                    <h2> Name: {pd.name}</h2>
                     <h4>price: ${pd.price}</h4>
-                    <h1>{loggedInUser.Username}</h1>
                 </div>
             </div>
             )

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import OptionalNavbar from "../OptionalNavbar/OptionalNavbar";
 import "./Admin.css";
 
 const Admin = () => {
@@ -44,20 +45,7 @@ const Admin = () => {
   return (
     <div>
       <div>
-        <Navbar bg="dark" variant="dark">
-          <Navbar.Brand>Admin Panel</Navbar.Brand>
-          <Nav className="mr-auto">
-            <Nav.Link>
-              <Link to="/admin">Add Product</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/manageProducts">Manage Product</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/home">Home</Link>
-            </Nav.Link>
-          </Nav>
-        </Navbar>
+        <OptionalNavbar></OptionalNavbar>
       </div>
       <div className="admin">
         <h1>Add Product</h1>
