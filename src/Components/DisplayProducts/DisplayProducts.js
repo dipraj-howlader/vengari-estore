@@ -11,12 +11,14 @@ const DisplayProducts = (props) => {
         history.push(`/checkout/${id}`);
     }
     return (
+        
         <div className="displayProducts">
+ 
             <img src={image} alt=""/>
             <h3>{name}</h3>
-            <div style={{display:'flex',paddingLeft:'10px'}}>
-            <h5>${price}</h5>
-            <Button onClick={() => handleCheckOut(_id)} variant="success"> Buy Now </Button>{' '}
+            <div className="innerfix">
+                <h5>${price}</h5>
+                <Button onClick={() => handleCheckOut(_id)} variant="success"> Buy Now </Button>{' '}
             
             </div>
         </div>

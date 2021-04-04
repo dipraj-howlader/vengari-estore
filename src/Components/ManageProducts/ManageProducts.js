@@ -27,7 +27,7 @@ const ManageProducts = () => {
         <div>
             {
                 manageProduct.map(pd => (
-                    <div style={{display:'grid'}}>
+                    <div>
                         Name : {pd.name}
                         price :{pd.price}
                         <button onClick={()=> deleteProduct(pd._id)}>Delete</button>

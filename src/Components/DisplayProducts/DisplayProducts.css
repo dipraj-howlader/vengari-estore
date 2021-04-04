@@ -1,8 +1,25 @@
-.displayProducts{
-background-color: aqua;
-margin: 10px;
-border: 1px solid red;
+.displayProducts {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px gray;
 }
-.displayProducts img{
-    width: 50px;
+
+.displayProducts img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.displayProducts .innerfix {
+    display: flex;
+
+}
+.displayProducts .innerfix h5{
+    padding-right: 150px;
+    margin-left: 10px ;
 }

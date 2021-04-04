@@ -1,0 +1,12 @@
+.admin {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.admin input {
+    padding: 10px;
+    background-color:honeydew;
+    margin: 10px;
+    box-shadow: 1px 1px 5px gray;
+    border: 1px solid honeydew;
+}

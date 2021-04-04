@@ -4,6 +4,7 @@ import { useState } from 'react';
 import DisplayProducts from '../DisplayProducts/DisplayProducts';
 import Header from '../Header/Header';
 import './Home.css';
+import Spinner from 'react-bootstrap/Spinner'
 
 const Home = () => {
     const [products, setProducts] =useState([])
@@ -17,10 +18,17 @@ const Home = () => {
             <div>
             <Header></Header>
             </div>
-            <div className="display">
+            <div >
+               <div  style={{textAlign:'center'}} >
+               {
+                    products.length===0  && <Spinner animation="border" /> 
+                }
+               </div>
+                <div className="display">
                 {
                     products.map(product => <DisplayProducts product={product} ></DisplayProducts>)
                 }
+                </div>
             </div>
             
         </div>

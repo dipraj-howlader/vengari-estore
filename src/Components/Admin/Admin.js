@@ -4,27 +4,28 @@ import { useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import "./Admin.css";
 
 const Admin = () => {
-    const [imageURL, setImageURL] = useState(null);
+  const [imageURL, setImageURL] = useState(null);
 
   const { register, handleSubmit, watch, errors } = useForm();
-  
+
   const onSubmit = (data) => {
-      const productData = {
-          name: data.name,
-          price: data.price,
-          image : imageURL
-      }
-    fetch('http://localhost:5055/addProduct' ,{
-        method:'POST',
-        headers:{
-            'content-type':'application/json'
-        },
-        body: JSON.stringify(productData)
-    })
-    .then(res => console.log('server side responsed') )
-};
+    const productData = {
+      name: data.name,
+      price: data.price,
+      image: imageURL,
+    };
+    fetch("http://localhost:5055/addProduct", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(productData),
+    }).then((res) => console.log("server side responsed"));
+
+  };
 
   const handleImageUpload = (event) => {
     const imageData = new FormData();
@@ -42,32 +43,34 @@ const Admin = () => {
   };
   return (
     <div>
-        <div>
-        <Navbar bg="dark" variant="dark">
-    <Navbar.Brand>Admin Panel</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link><Link to='/admin'>Add Product</Link></Nav.Link>
-      <Nav.Link><Link to="/manageProducts">Manage Product</Link></Nav.Link>
-      <Nav.Link><Link to="/home">Home</Link></Nav.Link>
-    </Nav>
-  </Navbar>
-        </div>
       <div>
-      <h1>Add Product</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input name="name" placeholder="Product name" ref={register} />
-        <br />
-        <input
-          name="price"
-          placeholder="Price"
-          ref={register}
-        />
-        <br />
-        <input type="file" name="photo" onChange={handleImageUpload} id="" />
-        <br />
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand>Admin Panel</Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link>
+              <Link to="/admin">Add Product</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/manageProducts">Manage Product</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/home">Home</Link>
+            </Nav.Link>
+          </Nav>
+        </Navbar>
+      </div>
+      <div className="admin">
+        <h1>Add Product</h1>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input name="name" placeholder="Product name" ref={register} />
+          <br />
+          <input name="price" placeholder="Price" ref={register} />
+          <br />
+          <input type="file" name="photo" onChange={handleImageUpload} id="" />
+          <br />
 
-        <input type="submit" />
-      </form>
+          <input type="submit" />
+        </form>
       </div>
     </div>
   );
