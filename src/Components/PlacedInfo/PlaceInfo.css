@@ -7,6 +7,9 @@
 
 
 @media (min-width:361px){
+    .placed{
+        width: 410px;
+    }
     .placed img{
         width: 300px;
         margin-left: 50px;
@@ -15,6 +18,9 @@
 
 
 @media (min-width:641px){
+    .placed{
+        width: 100%;
+    }
     .placed img{
         width: 550px;
         margin-left: 50px;

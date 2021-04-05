@@ -3,6 +3,7 @@
 }
 @media (min-width:361px){
     .display{
+        width: 410px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
@@ -13,6 +14,7 @@
 
 @media (min-width:641px){
     .display{
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }

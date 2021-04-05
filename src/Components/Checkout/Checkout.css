@@ -4,15 +4,16 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        font-size: smaller;
+        width: 410px;
     }
     .checkoutPd h1{
         background-color: aquamarine;
-        padding: 10px;
         border-radius: 10px;
         box-shadow: 1px 1px 5px gray;
     }
     .checkOutBtn{
-        margin-top: 50px;
+
         text-align: center;
     }
     .checkoutPd h4{
@@ -30,6 +31,7 @@
 
 @media (min-width:641px){
     .checkoutPd{
+        width: 100%;
         align-items: center;
         justify-content: center;
         text-align: center;
