@@ -4,6 +4,22 @@
     text-align: center;
     display: grid;
 }
-.placed img{
-    width: 500px;
+
+
+@media (min-width:361px){
+    .placed img{
+        width: 300px;
+        margin-left: 50px;
+    }
+}
+
+
+@media (min-width:641px){
+    .placed img{
+        width: 550px;
+        margin-left: 50px;
+    }
+    .placed button{
+        width: 150px;
+    }
 }

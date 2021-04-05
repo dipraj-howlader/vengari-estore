@@ -9,7 +9,6 @@ const OrderDetails = (props) => {
     if(loggedInUser.email === email)
         return(
         <div className="order">
-
           <h4> {Pname}</h4>
            <h6>Cost: ${Pprice}</h6>
           Order Time: {date}

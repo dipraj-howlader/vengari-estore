@@ -1,3 +1,13 @@
-.headerFix{
-margin-left: 400px;
+
+@media (min-width:480px){
+    .headerFix{
+        margin-left: 350px;
+        }
+}
+
+
+@media (min-width:641px){
+    .headerFix{
+        margin-left: 550px;
+        }
 }

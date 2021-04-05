@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
-import { Button, Nav, NavDropdown } from 'react-bootstrap';
+import { Button, Nav } from 'react-bootstrap';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import './Header.css';

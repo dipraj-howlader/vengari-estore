@@ -1,9 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
-import { Nav, Navbar } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
 import OptionalNavbar from "../OptionalNavbar/OptionalNavbar";
 import "./Admin.css";
 

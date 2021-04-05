@@ -1,9 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Redirect, useHistory } from "react-router";
-import { Nav, Navbar, Spinner } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
+import { Spinner } from "react-bootstrap";
 import { Button } from 'react-bootstrap';
 import './ManageProducts.css';
 import OptionalNavbar from "../OptionalNavbar/OptionalNavbar";

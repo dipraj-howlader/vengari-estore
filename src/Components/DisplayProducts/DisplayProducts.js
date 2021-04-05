@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap';
 import React from 'react';import './DisplayProducts.css';
-import { useHistory, useParams } from 'react-router';
+import { useHistory } from 'react-router';
 
 
 const DisplayProducts = (props) => {

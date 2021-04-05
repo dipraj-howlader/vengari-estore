@@ -9,8 +9,12 @@ const PlaceInfo = () => {
 
     return (
         <div className="placed">
+            <h3>Congrats, We have confirmed your order</h3>
             <img src={img} alt=""/>
-            <Button variant="primary"><Link style={{textDecoration:'none',color:'black'}} to="/order">Check Your All Orders Info </Link> </Button>{' '}
+            <div>
+            <p>Check Your all orders information Here,</p>
+            <Button variant="primary"><Link style={{textDecoration:'none',color:'black'}} to="/order">Click Here</Link> </Button>{' '}
+            </div>
         </div>
     );
 };

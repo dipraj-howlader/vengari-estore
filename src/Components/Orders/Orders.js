@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Spinner } from "react-bootstrap";
 import { UserContext } from "../../App";
 import Header from "../Header/Header";
 import OrderDetails from "../OrderDetalis/OrderDetails";
@@ -18,9 +17,11 @@ const Orders = () => {
       <Header></Header>
       <h3>
         Hey <span style={{ color: "cyan" }}>{loggedInUser.Username}</span> , You
-        have ordered:{" "}
+        have ordered:
       </h3>
-      {pdAllInfo?.map((pd) => (
+      {
+       
+      pdAllInfo?.map((pd) => (
         <OrderDetails pd={pd}></OrderDetails>
       ))}
     </div>
