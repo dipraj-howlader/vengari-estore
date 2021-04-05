@@ -11,13 +11,14 @@ import OptionalNavbar from "../OptionalNavbar/OptionalNavbar";
 const ManageProducts = () => {
   const [manageProduct, setManageProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5055/products")
+    fetch("https://guarded-ravine-35026.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setManageProducts(data));
   }, []);
   const history = useHistory();
-  const deleteProduct = (id) => {
-    fetch(`http://localhost:5055/delete/${id}`, {
+  
+  const deleteProduct = (id) => { 
+    fetch(`https://guarded-ravine-35026.herokuapp.com/delete/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

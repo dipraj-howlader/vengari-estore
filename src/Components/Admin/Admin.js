@@ -18,7 +18,7 @@ const Admin = () => {
       price: data.price,
       image: imageURL,
     };
-    fetch("http://localhost:5055/addProduct", {
+    fetch("https://guarded-ravine-35026.herokuapp.com/addProduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",

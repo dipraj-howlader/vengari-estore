@@ -21,7 +21,7 @@ const Header = () => {
           <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/home">Home</Link></Nav.Link>
           <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/order">Orders</Link></Nav.Link>
           <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/admin">Admin</Link></Nav.Link>
-          <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/checkout">Deals</Link></Nav.Link>
+          <Nav.Link ><Link style={{ textDecoration: 'none', padding: '8px', color: 'black' }} to="/">Deals</Link></Nav.Link>
           
 
           { loggedInUser.isSignedIn? <p style={{ textDecoration: 'none', padding: '8px', color: 'black' }}>{loggedInUser.Username}</p> :

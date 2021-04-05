@@ -17,7 +17,7 @@ const Checkout = () => {
 
     const [orderedProduct, setOrderedProduct] =useState([])
     useEffect(() => {
-        fetch('http://localhost:5055/products')
+        fetch('https://guarded-ravine-35026.herokuapp.com/products')
     .then(res => res.json())
     .then (data => setOrderedProduct(data))
     }, [])
@@ -48,6 +48,7 @@ let orderinfo = '';
                 </div>
                 <div className="checkoutPd">
                     <h1>Check Out</h1>
+                    <img src={pd.image} alt=""/>
                    <h2> Product Name : {pd.name}</h2>
                     <h4>Price: ${pd.price}</h4>
                 </div>
@@ -63,7 +64,7 @@ let orderinfo = '';
       const productData = {...orderinfo};
       console.log('got o place', productData);
 
-    fetch('http://localhost:5055/order' ,{
+    fetch('https://guarded-ravine-35026.herokuapp.com/order' ,{
         method:'POST',
         headers:{
             'content-type':'application/json'

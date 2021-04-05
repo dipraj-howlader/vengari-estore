@@ -9,7 +9,7 @@ import Spinner from 'react-bootstrap/Spinner'
 const Home = () => {
     const [products, setProducts] =useState([])
     useEffect(() => {
-        fetch('http://localhost:5055/products')
+        fetch('https://guarded-ravine-35026.herokuapp.com/products')
     .then(res => res.json())
     .then (data => setProducts(data))
     }, [])
